@@ -15,12 +15,16 @@ import {
         this.state = {
             redirect: false
         };
-        console.log('reload ;;;;')
     }
 
     componentDidMount() {
       // To disabled submit button at the beginning.
       this.props.form.validateFields();
+    }
+
+    checkUserAuth = (inputs) => {
+      // check 
+      // return boolean
     }
   
     handleSubmit = (e) => {
@@ -29,8 +33,9 @@ import {
       this.props.form.validateFields((err, values) => {
         if (!err) {
             console.log('Received values of form: ', values);
+            // fct
             this.setState({
-                redirect: true
+                redirect: this.checkUserAuth()
             });
         }
       });

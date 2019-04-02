@@ -3,8 +3,8 @@ import './App.css';
 import RouterView from './router';
 import { BrowserRouter } from 'react-router-dom';
 
-
 class App extends Component {
+
   render() {
     return (
       <BrowserRouter>
@@ -14,4 +14,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

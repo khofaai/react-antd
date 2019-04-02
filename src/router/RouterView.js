@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { routes } from './routes';
+
+import EstimationRouter from './r-estimation';
+
+import HomePage from '../components/HomePage';
+import LoginPage from '../components/LoginPage';
 
 class RouterView extends Component {
     render() {
-        let routeComponents = routes.map((route, key) => <Route {...route} key={key} /> )
         return (
             <Switch>
-                {routeComponents}
+                <Route path="/login" component={LoginPage} />
+                <HomePage>
+                    <Route path='/estimation' component={EstimationRouter} />
+                </HomePage>
             </Switch>
         );
     }
